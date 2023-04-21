@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>チーズアカデミー</title>
+    <meta name="description" content=“世界を変えるチーズを作ろう。チーズアカデミーは、チーズ職人を養成するための学校です。”>
+    <meta property="og:title" content="チーズアカデミー">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="チーズアカデミー" />
+    <meta property="og:description" content="世界を変えるチーズを作ろう。チーズアカデミーは、チーズ職人を養成するための学校です。" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="#">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/appendix.css" />
+
+    <script src="js/swiper.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <!-- あらかじめcssを読み込んでいるので設定しなくてOK-->
+</head>
+
+<body>
+    <!-- ここから記述しよう -->
+    <div class="contents">
+        <div class="header-photo">
+            <img src="img/homework/brand_logo.png" class="brand-logo">
+        </div>
+        <div class="top-menu">
+            <li>
+                <div class="cp_box">
+                    Category
+                    <input id="cp00" type="checkbox">
+                    <label for="cp00">▼ More</label>
+                    <div class="cp_container">
+                        Car
+                        <br>
+                        Gundam
+                        <br>
+                        Accessories　　　　
+                        <br>
+                        ・・・
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="cp_box-01">
+                    About
+                    <input id="cp01" type="checkbox">
+                    <label for="cp01">▼ More</label>
+                    <div class="cp_container-01">
+                        Web上に
+                        <br>
+                        コレクションケースを
+                        <br>
+                        作ることで場所の
+                        <br>
+                        制約なしにコレクションを楽しめます。
+                        <br>
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="cp_box-02">
+                    Contact
+                    <input id="cp02" type="checkbox">
+                    <label for="cp02">▼ More</label>
+                    <div class="cp_container-02">
+                        XXXXXXXXXXXXXXXX
+                    </div>
+                </div>
+            </li>
+        </div>
+
+        <div class="ura-hoge">
+            <p class="ura-title">Spotlight</p>
+            <p class="ura-fuga">Make my museum.</p>
+        </div>
+
+        <br>
+        <h2>Member</h2>
+        <div class="person">
+            <li>
+                <a href="#link-james">James</a>
+            </li>
+            <li>
+                <a href="#link-mick">Mick</a>
+            </li>
+            <li>
+                <a href="#link-jiro">Jiro</a>
+            </li>
+            <li>
+                <a href="#link-brian">Brian</a>
+            </li>
+        </div>
+        <!--　▼関数名は各々の名前をつけて他と被らないようにする　-->
+        <p>- James' museum -</p>
+        <div class="james">
+            <a id="link-james"></a>
+            <div class="slider-james-enzo">
+                <div class="slide-container-james-enzo">
+                    <img src="img/homework/james/enzo01.jpg" />
+                    <img src="img/homework/james/enzo02.jpg" />
+                    <img src="img/homework/james/enzo03.jpg" />
+                    <img src="img/homework/james/enzo04.jpg" />
+                </div>
+                <div class="prev-james-enzo" onclick="plusSlidesEnzo(-1)">&#10094;</div>
+                <div class="next-james-enzo" onclick="plusSlidesEnzo(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexEnzo = 1;
+                showSlidesEnzo(slideIndexEnzo);
+
+                function plusSlidesEnzo(n) {
+                    showSlidesEnzo(slideIndexEnzo += n);
+                }
+
+                function currentSlideEnzo(n) {
+                    showSlidesEnzo(slideIndexEnzo = n);
+                }
+
+                function showSlidesEnzo(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-james-enzo")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexEnzo = 1
+                    }
+                    if (n < 1) {
+                        slideIndexEnzo = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexEnzo - 1].style.display = "block";
+                    dots[slideIndexEnzo - 1].className += " active";
+                }
+            </script>
+
+            <div class="slider-james-enzogt">
+                <div class="slide-container-james-enzogt">
+                    <img src="img/homework/james/enzogt01.jpg" />
+                    <img src="img/homework/james/enzogt02.jpg" />
+                    <img src="img/homework/james/enzogt03.jpg" />
+                    <img src="img/homework/james/enzogt04.jpg" />
+                </div>
+                <div class="prev-james-enzogt" onclick="plusSlidesEnzogt(-1)">&#10094;</div>
+                <div class="next-james-enzogt" onclick="plusSlidesEnzogt(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexEnzogt = 1;
+                showSlidesEnzogt(slideIndexEnzogt);
+
+                function plusSlidesEnzogt(n) {
+                    showSlidesEnzogt(slideIndexEnzogt += n);
+                }
+
+                function currentSlideEnzogt(n) {
+                    showSlidesEnzogt(slideIndexEnzogt = n);
+                }
+
+                function showSlidesEnzogt(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-james-enzogt")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexEnzogt = 1
+                    }
+                    if (n < 1) {
+                        slideIndexEnzogt = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexEnzogt - 1].style.display = "block";
+                    dots[slideIndexEnzogt - 1].className += " active";
+                }
+            </script>
+
+            <div class="slider-james-enzoEVO">
+                <div class="slide-container-james-enzoEVO">
+                    <img src="img/homework/james/enzogtEVO01.jpg" />
+                    <img src="img/homework/james/enzogtEVO02.jpg" />
+                    <img src="img/homework/james/enzogtEVO03.jpg" />
+                    <img src="img/homework/james/enzogtEVO04.jpg" />
+                </div>
+                <div class="prev-james-enzoEVO" onclick="plusSlidesEnzoEVO(-1)">&#10094;</div>
+                <div class="next-james-enzoEVO" onclick="plusSlidesEnzoEVO(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexEnzoEVO = 1;
+                showSlidesEnzoEVO(slideIndexEnzoEVO);
+
+                function plusSlidesEnzoEVO(n) {
+                    showSlidesEnzoEVO(slideIndexEnzoEVO += n);
+                }
+
+                function currentSlideEnzoEVO(n) {
+                    showSlidesEnzoEVO(slideIndexEnzoEVO = n);
+                }
+
+                function showSlidesEnzoEVO(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-james-enzoEVO")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexEnzoEVO = 1
+                    }
+                    if (n < 1) {
+                        slideIndexEnzoEVO = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexEnzoEVO - 1].style.display = "block";
+                    dots[slideIndexEnzoEVO - 1].className += " active";
+                }
+            </script>
+        </div>
+
+        <p>- Mick's museum -</p>
+        <div class="mick">
+            <a id="link-mick"></a>
+            <div class="slider-mick-c292">
+                <div class="slide-container-mick-c292">
+                    <img src="img/homework/mick/C292_01.jpg" />
+                    <img src="img/homework/mick/C292_02.jpg" />
+                    <img src="img/homework/mick/C292_03.jpg" />
+                    <img src="img/homework/mick/C292_04.jpg" />
+                </div>
+                <div class="prev-mick-c292" onclick="plusSlidesC292(-1)">&#10094;</div>
+                <div class="next-mick-c292" onclick="plusSlidesC292(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexC292 = 1;
+                showSlidesC292(slideIndexC292);
+
+                function plusSlidesC292(n) {
+                    showSlidesC292(slideIndexC292 += n);
+                }
+
+                function currentSlideC292(n) {
+                    showSlidesC292(slideIndexC292 = n);
+                }
+
+                function showSlidesC292(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-mick-c292")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexC292 = 1
+                    }
+                    if (n < 1) {
+                        slideIndexC292 = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexC292 - 1].style.display = "block";
+                    dots[slideIndexC292 - 1].className += " active";
+                }
+            </script>
+
+            <div class="slider-mick-m3">
+                <div class="slide-container-mick-m3">
+                    <img src="img/homework/mick/m3_01.jpg" />
+                    <img src="img/homework/mick/m3_02.jpg" />
+                    <img src="img/homework/mick/m3_03.jpg" />
+                    <img src="img/homework/mick/m3_04.jpg" />
+                </div>
+                <div class="prev-mick-m3" onclick="plusSlidesM3(-1)">&#10094;</div>
+                <div class="next-mick-m3" onclick="plusSlidesM3(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexM3 = 1;
+                showSlidesM3(slideIndexM3);
+
+                function plusSlidesM3(n) {
+                    showSlidesM3(slideIndexM3 += n);
+                }
+
+                function currentSlideM3(n) {
+                    showSlidesM3(slideIndexM3 = n);
+                }
+
+                function showSlidesM3(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-mick-m3")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexM3 = 1
+                    }
+                    if (n < 1) {
+                        slideIndexM3 = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexM3 - 1].style.display = "block";
+                    dots[slideIndexM3 - 1].className += " active";
+                }
+            </script>
+
+            <div class="slider-mick-m3-dtm">
+                <div class="slide-container-mick-m3-dtm">
+                    <img src="img/homework/mick/m3_dtm_01.jpg" />
+                    <img src="img/homework/mick/m3_dtm_02.jpg" />
+                    <img src="img/homework/mick/m3_dtm_03.jpg" />
+                    <img src="img/homework/mick/m3_dtm_04.jpg" />
+                </div>
+                <div class="prev-mick-m3-dtm" onclick="plusSlidesM3DTM(-1)">&#10094;</div>
+                <div class="next-mick-m3-dtm" onclick="plusSlidesM3DTM(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexM3DTM = 1;
+                showSlidesM3DTM(slideIndexM3DTM);
+
+                function plusSlidesM3DTM(n) {
+                    showSlidesM3DTM(slideIndexM3DTM += n);
+                }
+
+                function currentSlideM3DTM(n) {
+                    showSlidesM3DTM(slideIndexM3DTM = n);
+                }
+
+                function showSlidesM3DTM(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-mick-m3-dtm")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexM3DTM = 1
+                    }
+                    if (n < 1) {
+                        slideIndexM3DTM = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexM3DTM - 1].style.display = "block";
+                    dots[slideIndexM3DTM - 1].className += " active";
+                }
+            </script>
+        </div>
+
+        <p>- Jiro's museum -</p>
+        <div class="jiro">
+            <a id="link-jiro"></a>
+            <div class="slider-jiro-normal">
+                <div class="slide-container-jiro-normal">
+                    <img src="img/homework/jiro/normal_01.jpg" />
+                    <img src="img/homework/jiro/normal_02.jpg" />
+                    <img src="img/homework/jiro/normal_03.jpg" />
+                    <img src="img/homework/jiro/normal_04.jpg" />
+                </div>
+                <div class="prev-jiro-normal" onclick="plusSlidesNormal(-1)">&#10094;</div>
+                <div class="next-jiro-normal" onclick="plusSlidesNormal(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexNormal = 1;
+                showSlidesNormal(slideIndexNormal);
+
+                function plusSlidesNormal(n) {
+                    showSlidesNormal(slideIndexNormal += n);
+                }
+
+                function currentSlideNormal(n) {
+                    showSlidesNormal(slideIndexNormal = n);
+                }
+
+                function showSlidesNormal(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-jiro-normal")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexNormal = 1
+                    }
+                    if (n < 1) {
+                        slideIndexNormal = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexNormal - 1].style.display = "block";
+                    dots[slideIndexNormal - 1].className += " active";
+                }
+            </script>
+
+            <div class="slider-jiro-No98">
+                <div class="slide-container-jiro-No98">
+                    <img src="img/homework/jiro/No98_01.jpg" />
+                    <img src="img/homework/jiro/No98_02.jpg" />
+                    <img src="img/homework/jiro/No98_03.jpg" />
+                    <img src="img/homework/jiro/No98_04.jpg" />
+                </div>
+                <div class="prev-jiro-No98" onclick="plusSlidesNo98(-1)">&#10094;</div>
+                <div class="next-jiro-No98" onclick="plusSlidesNo98(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexNo98 = 1;
+                showSlidesNo98(slideIndexNo98);
+
+                function plusSlidesNo98(n) {
+                    showSlidesNo98(slideIndexNo98 += n);
+                }
+
+                function currentSlideNo98(n) {
+                    showSlidesNo98(slideIndexNo98 = n);
+                }
+
+                function showSlidesNo98(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-jiro-No98")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexNo98 = 1
+                    }
+                    if (n < 1) {
+                        slideIndexNo98 = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexNo98 - 1].style.display = "block";
+                    dots[slideIndexNo98 - 1].className += " active";
+                }
+            </script>
+
+            <div class="slider-jiro-15THmodel">
+                <div class="slide-container-jiro-15THmodel">
+                    <img src="img/homework/jiro/15THmodel_01.jpg" />
+                    <img src="img/homework/jiro/15THmodel_02.jpg" />
+                    <img src="img/homework/jiro/15THmodel_03.jpg" />
+                    <img src="img/homework/jiro/15THmodel_04.jpg" />
+                </div>
+                <div class="prev-jiro-15THmodel" onclick="plusSlides15THmodel(-1)">&#10094;</div>
+                <div class="next-jiro-15THmodel" onclick="plusSlides15THmodel(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndex15THmodel = 1;
+                showSlides15THmodel(slideIndex15THmodel);
+
+                function plusSlides15THmodel(n) {
+                    showSlides15THmodel(slideIndex15THmodel += n);
+                }
+
+                function currentSlide15THmodel(n) {
+                    showSlides15THmodel(slideIndex15THmodel = n);
+                }
+
+                function showSlides15THmodel(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-jiro-15THmodel")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndex15THmodel = 1
+                    }
+                    if (n < 1) {
+                        slideIndex15THmodel = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex15THmodel - 1].style.display = "block";
+                    dots[slideIndex15THmodel - 1].className += " active";
+                }
+            </script>
+        </div>
+
+        <p>- Brian's museum -</p>
+        <div class="brian">
+            <a id="link-brian"></a>
+            <div class="slider-brian-c5r">
+                <div class="slide-container-brian-c5r">
+                    <img src="img/homework/brian/c5r_01.jpg" />
+                    <img src="img/homework/brian/c5r_02.jpg" />
+                    <img src="img/homework/brian/c5r_03.jpg" />
+                    <img src="img/homework/brian/c5r_04.jpg" />
+                </div>
+                <div class="prev-brian-c5r" onclick="plusSlidesC5r(-1)">&#10094;</div>
+                <div class="next-brian-c5r" onclick="plusSlidesC5r(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexC5r = 1;
+                showSlidesC5r(slideIndexC5r);
+
+                function plusSlidesC5r(n) {
+                    showSlidesC5r(slideIndexC5r += n);
+                }
+
+                function currentSlideC5r(n) {
+                    showSlidesC5r(slideIndexC5r = n);
+                }
+
+                function showSlidesC5r(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-brian-c5r")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexC5r = 1
+                    }
+                    if (n < 1) {
+                        slideIndexC5r = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexC5r - 1].style.display = "block";
+                    dots[slideIndexC5r - 1].className += " active";
+                }
+            </script>
+
+            <div class="slider-brian-911">
+                <div class="slide-container-brian-911">
+                    <img src="img/homework/brian/911_01.jpg" />
+                    <img src="img/homework/brian/911_02.jpg" />
+                    <img src="img/homework/brian/911_03.jpg" />
+                    <img src="img/homework/brian/911_04.jpg" />
+                </div>
+                <div class="prev-brian-911" onclick="plusSlides911(-1)">&#10094;</div>
+                <div class="next-brian-911" onclick="plusSlides911(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndex911 = 1;
+                showSlides911(slideIndex911);
+
+                function plusSlides911(n) {
+                    showSlides911(slideIndex911 += n);
+                }
+
+                function currentSlide911(n) {
+                    showSlides911(slideIndex911 = n);
+                }
+
+                function showSlides911(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-brian-911")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndex911 = 1
+                    }
+                    if (n < 1) {
+                        slideIndex911 = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex911 - 1].style.display = "block";
+                    dots[slideIndex911 - 1].className += " active";
+                }
+            </script>
+
+            <div class="slider-brian-r8">
+                <div class="slide-container-brian-r8">
+                    <img src="img/homework/brian/r8_01.jpg" />
+                    <img src="img/homework/brian/r8_02.jpg" />
+                    <img src="img/homework/brian/r8_03.jpg" />
+                    <img src="img/homework/brian/r8_04.jpg" />
+                </div>
+                <div class="prev-brian-r8" onclick="plusSlidesR8(-1)">&#10094;</div>
+                <div class="next-brian-r8" onclick="plusSlidesR8(1)">&#10095;</div>
+            </div>
+            <script>
+                let slideIndexR8 = 1;
+                showSlidesR8(slideIndexR8);
+
+                function plusSlidesR8(n) {
+                    showSlidesR8(slideIndexR8 += n);
+                }
+
+                function currentSlideR8(n) {
+                    showSlidesR8(slideIndexR8 = n);
+                }
+
+                function showSlidesR8(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("slide-container-brian-r8")[0].getElementsByTagName("img");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndexR8 = 1
+                    }
+                    if (n < 1) {
+                        slideIndexR8 = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndexR8 - 1].style.display = "block";
+                    dots[slideIndexR8 - 1].className += " active";
+                }
+            </script>
+        </div>
+
+        <div class="footer-photo">
+            <img src="img/homework/brand_logo.png" class="brand-logo">
+        </div>
+        <div class="footer">
+            <button type=" button" id="ura-top" class="ura-top">▲top</button>
+            <script>
+                const btn = document.getElementById("ura-top");
+
+                btn.addEventListener("click", () => {
+                    window.scroll({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                });
+            </script>
+            <button type=" button" class="first">初めての方へ</button>
+            <button type=" question" class="question">よくある質問</button>
+            <button type=" use" class="use">利用規約</button>
+            <button type=" dealrule" class="dealrule">特定商品取引法</button>
+            <button type=" privacy" class="privacy">プライバシーポリシー</button>
+            <button type=" footer-contact" class="footer-contact">お問い合わせ</button>
+            <button type=" company-outline" class="company-outline">会社概要</button>
+            <button type=" mail-magazine" class="mail-magazine">メールマガジン登録・解約</button>
+        </div>
+        <div class="sns">
+            <a href="https://twitter.com/sociality_nxt_0?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                data-show-count="false">Follow @sociality_nxt_0</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            <a href="https://www.instagram.com/hide_yama_99/" target="_blank"
+                rel="noopener noreferrer">@hide_yama_99</a>
+            <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhidetaka.yamamoto.71&tabs=%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB&width=200&height=80&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="200" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+</body>
+
+
+</html>
